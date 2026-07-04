@@ -1,72 +1,141 @@
-const track = document.querySelector(".slider-track");
-const images = [...track.children];
+if(window.innerWidth <= 768){
 
-const visible = 3;
-const step = 2;
+const slider = document.querySelector(".history .slideshow");
 
-let current = 0;
+const originalSlides = [...slider.children];
 
-// Клонуємо картинки спереду і ззаду
-const before = images.slice(-visible);
-const after = images.slice(0, visible);
+const firstClone = originalSlides[0].cloneNode(true);
+const lastClone = originalSlides[originalSlides.length-1].cloneNode(true);
 
-before.forEach(img=>{
-    track.insertBefore(img.cloneNode(true), track.firstChild);
-});
+slider.appendChild(firstClone);
+slider.insertBefore(lastClone,slider.firstChild);
 
-after.forEach(img=>{
-    track.appendChild(img.cloneNode(true));
-});
+const slides = slider.children;
 
-const allImages = track.children;
-const imgWidth = allImages[0].offsetWidth;
+let current = 1;
 
-current = visible;
-track.style.transform = `translateX(-${current*imgWidth}px)`;
+slider.style.transform="translateX(-100%)";
 
-function move(){
-    track.style.transition=".5s";
-    track.style.transform=`translateX(-${current*imgWidth}px)`;
+let auto;
+
+function update(animation=true){
+
+    slider.style.transition = animation
+        ? "transform .45s ease"
+        : "none";
+
+    slider.style.transform=
+        `translateX(-${current*100}%)`;
+
 }
 
-document.querySelector(".next").onclick=()=>{
+function next(){
 
-    current += step;
-    move();
+    current++;
 
-    track.addEventListener("transitionend",function handler(){
+    update();
 
-        if(current >= images.length + visible){
+}
 
-            track.style.transition="none";
-            current -= images.length;
-            track.style.transform=`translateX(-${current*imgWidth}px)`;
+function prev(){
 
-        }
+    current--;
 
-        track.removeEventListener("transitionend",handler);
+    update();
 
-    });
+}
 
-};
+slider.addEventListener("transitionend",()=>{
 
-document.querySelector(".prev").onclick=()=>{
+    if(current===slides.length-1){
 
-    current -= step;
-    move();
+        current=1;
 
-    track.addEventListener("transitionend",function handler(){
+        update(false);
 
-        if(current < visible){
+    }
 
-            track.style.transition="none";
-            current += images.length;
-            track.style.transform=`translateX(-${current*imgWidth}px)`;
+    if(current===0){
 
-        }
+        current=slides.length-2;
 
-        track.removeEventListener("transitionend",handler);
+        update(false);
 
-    });
+    }
 
-};
+});
+
+function start(){
+
+    auto=setInterval(next,4000);
+
+}
+
+function stop(){
+
+    clearInterval(auto);
+
+}
+
+start();
+
+
+// --------------------
+// Swipe
+// --------------------
+
+let startX=0;
+let endX=0;
+
+slider.addEventListener("touchstart",(e)=>{
+
+    stop();
+
+    startX=e.touches[0].clientX;
+
+});
+
+slider.addEventListener("touchmove",(e)=>{
+
+    endX=e.touches[0].clientX;
+
+});
+
+slider.addEventListener("touchend",()=>{
+
+    const diff=startX-endX;
+
+    if(diff>60){
+
+        next();
+
+    }
+    else if(diff<-60){
+
+        prev();
+
+    }
+
+    start();
+
+});
+
+}
+
+document.querySelector(".history-next")
+.addEventListener("click",()=>{
+
+    stop();
+    next();
+    start();
+
+});
+
+document.querySelector(".history-prev")
+.addEventListener("click",()=>{
+
+    stop();
+    prev();
+    start();
+
+});

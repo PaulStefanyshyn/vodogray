@@ -525,6 +525,10 @@ main {
     color: #303030;
 }
 
+.history-slider .history-buttons {
+    display: none;
+}
+
 
 /* ===================contacts======================= */
 
@@ -603,6 +607,12 @@ main {
 
 
 /* ==============================adaptive==================== */
+@media (max-width: 1370px) {
+    .home {
+        padding-top: 5%;
+    }
+}
+
 @media (max-width: 1200px) {
 
     .rooms,
@@ -677,36 +687,117 @@ main {
     }
 
     .history {
+
         height: auto;
-        padding: 40px 0;
+        overflow: hidden;
+        padding-bottom: 40px;
+
     }
 
-    .history .slideshow {
+    .history .info {
 
-        position: relative;
+        width: 90%;
+        margin-bottom: 30px;
 
-        display: flex;
+    }
+
+    .history-slider {
+
+        width: 100%;
         overflow: hidden;
 
     }
 
-    .history .slide {
+    .history .slideshow {
+
+        display: flex;
+        width: 100%;
+
+        transition: transform .45s ease;
+
+    }
+
+    .history-slider .history-buttons {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+
+        position: absolute;
+
+        width: 96%;
+        top: 70%;
+    }
+
+    .history-buttons button {
+
+        pointer-events: auto;
+
+        width: 50px;
+        height: 50px;
+
+        border: none;
+        border-radius: 50%;
+
+        background: rgba(0, 0, 0, .45);
+
+        color: white;
+
+        font-size: 28px;
+
+        cursor: pointer;
+
+        transition: .3s;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .history-buttons button:hover {
+
+        background: rgba(0, 0, 0, .7);
+
+        transform: scale(1.1);
+
+    }
+
+
+    .history .slideshow .slide {
+
+        flex: 0 0 100%;
 
         position: relative !important;
 
-        top: auto !important;
         left: auto !important;
         right: auto !important;
+        top: auto !important;
         bottom: auto !important;
 
         transform: none !important;
 
-        flex: 0 0 100%;
+        width: 70% !important;
+        height: auto !important;
 
-        width: 100% !important;
+        padding: 25px 60px;
+
+        box-sizing: border-box;
+
+    }
+
+    .history .slideshow .slide img {
+
+        width: 75% !important;
         height: auto !important;
 
     }
+
+    .history .slideshow .slide .title {
+
+        width: 80% !important;
+
+    }
+
 }
 
 @media (max-width: 576px) {
