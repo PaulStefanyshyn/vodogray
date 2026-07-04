@@ -411,7 +411,7 @@ main {
     width: 418px;
     height: 418px;
 
-    transform:rotate(-10.25deg);
+    transform: rotate(-10.25deg);
 
     top: 25px;
     left: 29px;
@@ -432,7 +432,7 @@ main {
     width: 403px;
     height: 403px;
 
-    transform:rotate(2.79deg);
+    transform: rotate(2.79deg);
 
     bottom: 35px;
     left: 79px;
@@ -454,7 +454,7 @@ main {
     width: 365px;
     height: 365px;
 
-    transform:rotate(-9.32deg);
+    transform: rotate(-9.32deg);
 
     bottom: 55px;
     left: 35%;
@@ -475,7 +475,7 @@ main {
     width: 403px;
     height: 403px;
 
-    transform:rotate(-2.79deg);
+    transform: rotate(-2.79deg);
 
     bottom: 30px;
     right: 35px;
@@ -496,7 +496,7 @@ main {
     width: 403px;
     height: 403px;
 
-    transform:rotate(2.79deg);
+    transform: rotate(2.79deg);
 
     top: 20px;
     right: 20px;
@@ -528,33 +528,34 @@ main {
 
 /* ===================contacts======================= */
 
-.contacts{
+.contacts {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
 
     padding: 0 60px;
+    gap: 15px;
 }
 
 .contacts img,
-.contacts iframe{
+.contacts iframe {
     width: 380px;
     height: 400px;
 
     border-radius: 20px;
     object-fit: cover;
-    object-position: center; 
+    object-position: center;
 }
 
-.contacts .contact{
+.contacts .contact {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
 }
 
-.contacts .contact h2{
+.contacts .contact h2 {
     font-size: 30px;
     font-family: 'Lora';
     font-weight: 300;
@@ -563,7 +564,7 @@ main {
     margin-bottom: 15px;
 }
 
-.contacts .contact .cont{
+.contacts .contact .cont {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -573,7 +574,7 @@ main {
     margin-bottom: 20px;
 }
 
-.contacts .contact .cont img{
+.contacts .contact .cont img {
     width: 30px;
     height: 30px;
 
@@ -582,14 +583,14 @@ main {
 }
 
 .contacts .contact .cont p,
-.contacts .contact .cont a{
+.contacts .contact .cont a {
     font-size: 16px;
     font-family: 'Montserrat';
     font-weight: 400;
     color: #3F3E45;
 }
 
-.contacts .contact .route-btn{
+.contacts .contact .route-btn {
     font-size: 20px;
     font-family: 'Montserrat';
     color: #E3DEDE;
@@ -598,4 +599,131 @@ main {
     border-radius: 10px;
 
     padding: 15px 30px;
+}
+
+
+/* ==============================adaptive==================== */
+@media (max-width: 1200px) {
+
+    .rooms,
+    .contacts,
+    .about.us {
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+
+    .home {
+        padding-left: 40px;
+    }
+
+    .home .info {
+        width: 75%;
+    }
+}
+
+@media (max-width: 992px) {
+    .about.us {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .rooms .room {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contacts {
+        flex-direction: column;
+    }
+
+    .about.us img,
+    .rooms .room img,
+    .contacts iframe,
+    .contacts>img {
+        width: 100%;
+        max-width: 600px;
+        height: auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .home {
+        padding: 180px 25px 0;
+    }
+
+    .home .info {
+        width: 100%;
+    }
+
+    .home .info h1 {
+        font-size: 48px;
+    }
+
+    .home .info p {
+        width: 100%;
+        font-size: 22px;
+    }
+
+    .rooms {
+        padding: 0 20px;
+    }
+
+    .contacts {
+        padding: 0 20px;
+    }
+
+    .about.us {
+        padding: 0 20px;
+    }
+
+    .history {
+        height: auto;
+        padding: 40px 0;
+    }
+
+    .history .slideshow {
+
+        position: relative;
+
+        display: flex;
+        overflow: hidden;
+
+    }
+
+    .history .slide {
+
+        position: relative !important;
+
+        top: auto !important;
+        left: auto !important;
+        right: auto !important;
+        bottom: auto !important;
+
+        transform: none !important;
+
+        flex: 0 0 100%;
+
+        width: 100% !important;
+        height: auto !important;
+
+    }
+}
+
+@media (max-width: 576px) {
+    .home .info h1 {
+        font-size: 34px;
+    }
+
+    .home .info p {
+        font-size: 18px;
+    }
+
+    .home .info a {
+        width: 100%;
+        text-align: center;
+    }
+
+    .rooms .room .info .include {
+        grid-template-columns: 1fr;
+    }
 }
