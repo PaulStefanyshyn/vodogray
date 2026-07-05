@@ -675,6 +675,14 @@ main {
         width: 100%;
     }
 
+    .history .info h1 {
+        font-size: 36px;
+    }
+
+    .history .info h2 {
+        font-size:24px;
+    }
+
     .history-slider {
 
         width: 100%;
@@ -699,8 +707,8 @@ main {
 
         position: absolute;
 
-        width: 96%;
-        top: 70%;
+        width: calc(100vw - 35px);
+        top: 65%;
     }
 
     .history-buttons button {
@@ -806,6 +814,27 @@ main {
         padding: 0 20px;
     }
 
+    .rooms .room .info h1 {
+        font-size: 26px;
+    }
+
+    .rooms .room .info .include .incl p {
+        font-size: 12px;
+    }
+
+    .rooms .room .info .price p {
+        font-size: 20px;
+    }
+
+    .rooms .room .info .price h2 {
+        font-size: 36px;
+    }
+
+    .rooms .room .info .price h2::after {
+        content: 'грн / ніч';
+        font-size: 20px;
+    }
+
     .contacts {
         padding: 0 20px;
     }
@@ -827,10 +856,6 @@ main {
     .home .info a {
         width: 80%;
         text-align: center;
-    }
-
-    .rooms .room .info .include {
-        grid-template-columns: 1fr;
     }
 
     .history .slideshow .slide .title h2 {
