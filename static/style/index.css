@@ -177,6 +177,7 @@ main {
     flex-direction: row;
     justify-content: space-between;
     align-items: flex-start;
+    flex-wrap: wrap;
 
     gap: 40px;
 }
@@ -654,37 +655,6 @@ main {
         max-width: 600px;
         height: auto;
     }
-}
-
-@media (max-width: 768px) {
-    .home {
-        padding: 180px 25px 0;
-    }
-
-    .home .info {
-        width: 100%;
-    }
-
-    .home .info h1 {
-        font-size: 48px;
-    }
-
-    .home .info p {
-        width: 100%;
-        font-size: 22px;
-    }
-
-    .rooms {
-        padding: 0 20px;
-    }
-
-    .contacts {
-        padding: 0 20px;
-    }
-
-    .about.us {
-        padding: 0 20px;
-    }
 
     .history {
 
@@ -699,6 +669,10 @@ main {
         width: 90%;
         margin-bottom: 30px;
 
+    }
+
+    .history .info p {
+        width: 100%;
     }
 
     .history-slider {
@@ -780,6 +754,7 @@ main {
         height: auto !important;
 
         padding: 25px 60px;
+        padding-top: 10%;
 
         box-sizing: border-box;
 
@@ -798,6 +773,46 @@ main {
 
     }
 
+    .history .slideshow .slide .title {
+        margin-bottom: 10px;
+    }
+}
+
+@media (max-width: 768px) {
+    .home {
+        padding: 180px 25px 0;
+    }
+
+    .home .info {
+        width: 100%;
+    }
+
+    .home .info h1 {
+        font-size: 48px;
+    }
+
+    .home .info p {
+        width: 100%;
+        font-size: 22px;
+    }
+
+    .home .info a {
+        font-size: 18px;
+
+        padding: 10px 15зч;
+    }
+
+    .rooms {
+        padding: 0 20px;
+    }
+
+    .contacts {
+        padding: 0 20px;
+    }
+
+    .about.us {
+        padding: 0 20px;
+    }
 }
 
 @media (max-width: 576px) {
@@ -810,11 +825,27 @@ main {
     }
 
     .home .info a {
-        width: 100%;
+        width: 80%;
         text-align: center;
     }
 
     .rooms .room .info .include {
         grid-template-columns: 1fr;
+    }
+
+    .history .slideshow .slide .title h2 {
+        font-size: 18px;
+    }
+
+    .history .slideshow .slide p {
+        font-size: 10px;
+    }
+
+    .history .slideshow .slide .title {
+        margin-bottom: 5px;
+    }
+
+    .history-slider .history-buttons {
+        top: 80%;
     }
 }

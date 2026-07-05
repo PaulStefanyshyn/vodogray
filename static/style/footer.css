@@ -1,4 +1,4 @@
-footer{
+footer {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -9,7 +9,7 @@ footer{
     padding: 15px;
 }
 
-footer section{
+footer section {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -18,7 +18,7 @@ footer section{
     gap: 10px;
 }
 
-footer section h1{
+footer section h1 {
     font-size: 14px;
     font-family: 'Montserrat';
     font-weight: 400;
@@ -27,18 +27,84 @@ footer section h1{
     margin-bottom: 30px;
 }
 
-footer section:nth-child(1) h1{
+footer section:nth-child(1) h1 {
     font-size: 20px;
     font-family: 'Gabriela';
 }
 
 footer section p,
-footer section a{
+footer section a {
     font-size: 12px;
     font-family: 'Montserrat';
     color: #E3DEDE;
 }
 
-footer .info a{
+footer .info a {
     font-size: 8px;
+}
+
+@media (max-width: 768px) {
+    footer {
+
+        display: grid;
+
+        grid-template-columns: 1fr 1fr;
+
+        grid-template-areas:
+            "title title"
+            "map contacts"
+            "social social"
+            "text text";
+
+        gap: 20px;
+
+    }
+
+    footer section h1 {
+
+        margin-bottom: 10px;
+    }
+
+    footer .info {
+        display: contents;
+    }
+
+    footer .foter-title,
+    footer .footer-smm{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    footer .info .foter-title {
+        grid-area: title;
+    }
+
+    footer .map {
+        grid-area: map;
+    }
+
+    footer .footer_contacts {
+        grid-area: contacts;
+    }
+
+    footer .socialmedia {
+        grid-area: social;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+
+        gap: 25px;
+    }
+
+    footer .socialmedia .media {
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+    }
+
+    footer .info .footer-smm {
+        grid-area: text;
+    }
 }

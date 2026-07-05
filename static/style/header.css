@@ -1,4 +1,8 @@
-header{
+body.menu-open{
+    overflow: hidden;
+}
+
+header {
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
@@ -13,7 +17,7 @@ header{
     width: 100%;
 }
 
-.phone{
+.phone {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -23,18 +27,18 @@ header{
     margin-left: 50px;
 }
 
-.phone img{
+.phone img {
     width: 30px;
     height: 30px;
 }
 
-.phone p{
+.phone p {
     font-size: 18px;
     color: white;
     font-family: 'Lora';
 }
 
-header a{
+header a {
     padding: 10px 50px;
     background-color: #BD9765;
     border-radius: 10px;
@@ -42,4 +46,133 @@ header a{
     color: white;
     font-size: 14px;
     font-family: 'Montserrat';
+}
+
+.nav {
+
+    display: none;
+
+}
+
+.burger {
+
+    display: none;
+
+}
+
+.burger.active span:nth-child(1) {
+
+    transform: translateY(10px) rotate(45deg);
+
+}
+
+.burger.active span:nth-child(2) {
+
+    opacity: 0;
+
+}
+
+.burger.active span:nth-child(3) {
+
+    transform: translateY(-10px) rotate(-45deg);
+
+}
+
+@media (max-width:768px) {
+
+    header {
+
+        padding: 20px;
+
+    }
+
+    header a,
+    header .phone {
+        display: none;
+    }
+
+    .burger {
+
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        width: 32px;
+        height: 24px;
+
+        border: none;
+        background: none;
+
+        cursor: pointer;
+
+        padding: 0;
+
+        z-index: 1001;
+
+    }
+
+    .burger span {
+
+        width: 100%;
+        height: 3px;
+
+        background: white;
+
+        border-radius: 2px;
+
+        transition: .3s;
+
+    }
+
+    .nav {
+        gap: 15px;
+
+        position: fixed;
+
+        top: 0;
+        right: -100%;
+        padding: 35px 15px;
+
+        width: 260px;
+        height: 100vh;
+
+        background: #32302D;
+
+        display: flex;
+        flex-direction: column;
+
+        justify-content: flex-start;
+        align-items: flex-start;
+
+        transition: .35s;
+
+        z-index: 1000;
+
+    }
+
+    .nav h1{
+        color: white;
+        font-size: 24px;
+        font-family: 'Montserrat';
+    }
+
+    .nav a {
+
+        display: block;
+        color: white;
+        text-decoration: none;
+        font-size: 14px;
+        padding: 0;
+        background-color: transparent;
+        border-radius: 0;
+        font-family: 'Montserrat';
+
+    }
+
+    .nav.active {
+
+        right: 0;
+
+    }
+
 }
