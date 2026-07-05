@@ -786,7 +786,7 @@ main {
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 868px) {
     .home {
         padding: 180px 25px 0;
     }

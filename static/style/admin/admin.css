@@ -1,0 +1,33 @@
+.admin{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    margin: 15px;
+}
+
+.admin div{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+
+    gap: 35px;
+    margin-bottom: 35px;
+}
+
+.admin div img{
+    width: 360px;
+    height: 360px;
+}
+
+.admin div form{
+    height: 180px;
+}
+
+.admin div form{
+    border: 2px solid gold;
+    padding: 0 35px;
+    padding-top: 180px;
+}
