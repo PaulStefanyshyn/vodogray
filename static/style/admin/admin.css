@@ -1,5 +1,5 @@
 .admin{
-    display: flex;
+    display: none;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -22,12 +22,22 @@
     height: 360px;
 }
 
-.admin div form{
-    height: 180px;
+.admin div .info{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    border: 2px solid gold;
+    padding: 35px;
+    margin-bottom: 0;
+
+    height: 290px;
 }
 
-.admin div form{
-    border: 2px solid gold;
-    padding: 0 35px;
-    padding-top: 180px;
+.admin div .info h2{
+    font-size: 18px;
+    text-align: start;
+    font-weight: 300;
+
+    width: 100%;
 }
