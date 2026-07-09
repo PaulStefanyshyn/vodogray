@@ -22,19 +22,25 @@ main {
     background-repeat: no-repeat;
 
     height: 100vh;
-    padding-top: 20%;
-    padding-left: 60px;
+    /* padding-top: 10%; */
+    /* padding-left: 60px; */
 
     box-sizing: border-box;
+
 }
 
 .home .info {
-    width: 65%;
+    max-width: 65%;
 
     color: white;
 
     display: flex;
     flex-direction: column;
+
+    position: absolute;
+
+    left: 60px;
+    bottom: 40px;
 }
 
 .home .info h1 {
@@ -401,6 +407,8 @@ main {
 
     width: 90%;
     max-height: 45%;
+
+    object-fit: cover;
 }
 
 .history .slideshow .slide .title {
@@ -574,12 +582,6 @@ main {
 
 
 /* ==============================adaptive==================== */
-@media (max-width: 1370px) {
-    .home {
-        padding-top: 5%;
-    }
-}
-
 @media (max-width: 1200px) {
 
     .rooms,
