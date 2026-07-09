@@ -386,15 +386,21 @@ main {
 
     box-sizing: border-box;
 
-    padding: 45px 45px 25px 45px;
+    padding: 2%;
 
     position: absolute;
     z-index: 1;
+
+    width: 25%;
+    height: max-content;
 }
 
 .history .slideshow .slide img {
     display: block;
     margin: 0 auto;
+
+    width: 90%;
+    max-height: 45%;
 }
 
 .history .slideshow .slide .title {
@@ -403,13 +409,13 @@ main {
     justify-content: space-between;
     align-items: flex-start;
 
-    width: 337px;
+    width: 90%;
     margin: 0 auto;
     margin-bottom: 20px;
 }
 
 .history .slideshow .slide:nth-child(1) {
-    width: 418px;
+    width: 28%;
     height: 418px;
 
     transform: rotate(-10.25deg);
@@ -420,17 +426,7 @@ main {
     z-index: 2;
 }
 
-.history .slideshow .slide:nth-child(1) img {
-    width: 287px;
-    height: 176px;
-}
-
-.history .slideshow .slide:nth-child(1) .title {
-    width: 287px;
-}
-
 .history .slideshow .slide:nth-child(2) {
-    width: 403px;
     height: 403px;
 
     transform: rotate(2.79deg);
@@ -440,19 +436,11 @@ main {
     z-index: 1;
 }
 
-.history .slideshow .slide:nth-child(2) img {
-    width: 296px;
-    height: 182px;
-}
-
 .history .slideshow .slide:nth-child(2) .title {
-    width: 296px;
-
     margin-top: 10px;
 }
 
 .history .slideshow .slide:nth-child(3) {
-    width: 365px;
     height: 365px;
 
     transform: rotate(-9.32deg);
@@ -461,19 +449,11 @@ main {
     left: 35%;
 }
 
-.history .slideshow .slide:nth-child(3) img {
-    width: 271px;
-    height: 143px;
-}
-
 .history .slideshow .slide:nth-child(3) .title {
-    width: 271px;
-
     margin-top: 5px;
 }
 
 .history .slideshow .slide:nth-child(4) {
-    width: 403px;
     height: 403px;
 
     transform: rotate(-2.79deg);
@@ -482,19 +462,12 @@ main {
     right: 35px;
 }
 
-.history .slideshow .slide:nth-child(4) img {
-    width: 275px;
-    height: 176px;
-}
-
 .history .slideshow .slide:nth-child(4) .title {
-    width: 275px;
-
     margin-top: 15px;
 }
 
 .history .slideshow .slide:nth-child(5) {
-    width: 403px;
+    width: 28%;
     height: 403px;
 
     transform: rotate(2.79deg);
@@ -503,14 +476,7 @@ main {
     right: 20px;
 }
 
-.history .slideshow .slide:nth-child(5) img {
-    width: 283px;
-    height: 167px;
-}
-
 .history .slideshow .slide:nth-child(5) .title {
-    width: 275px;
-
     margin-top: 10px;
 }
 
