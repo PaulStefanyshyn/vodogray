@@ -209,9 +209,10 @@ main {
 }
 
 
-/* ========================rooms========================= */
+/* ========================rooms&holl========================= */
 
-.rooms {
+.rooms,
+.holl {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -220,7 +221,8 @@ main {
     padding: 0 60px;
 }
 
-.rooms h2 {
+.rooms h2,
+.holl h2 {
     font-size: 30px;
     font-family: "Lora";
     color: #3F3E45;
@@ -229,7 +231,8 @@ main {
     margin-bottom: 30px;
 }
 
-.rooms .room {
+.rooms .room,
+.holl .hotel-holl {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -238,21 +241,24 @@ main {
     gap: 50px;
 }
 
-.rooms .room img {
+.rooms .room img,
+.holl .hotel-holl img {
     width: 510px;
     height: 390px;
 
     border-radius: 20px;
 }
 
-.rooms .room .info {
+.rooms .room .info,
+.holl .hotel-holl .info {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
 }
 
-.rooms .room .info h1 {
+.rooms .room .info h1,
+.holl .hotel-holl .info h1 {
     font-size: 40px;
     font-family: 'Merriweather';
     color: #15304D;
@@ -261,7 +267,12 @@ main {
     margin-bottom: 90px;
 }
 
-.rooms .room .info .include {
+.holl .hotel-holl .info h1{
+    margin-bottom: 35px;
+}
+
+.rooms .room .info .include,
+.holl .hotel-holl .info .include {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 20px 50px;
@@ -269,7 +280,14 @@ main {
     margin-top: -40px;
 }
 
-.rooms .room .info .include .incl {
+.holl .hotel-holl .info .include{
+    grid-template-columns: repeat(1, 1fr);
+
+    margin-top: 0;
+}
+
+.rooms .room .info .include .incl,
+.holl .hotel-holl .info .include .incl {
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
@@ -278,18 +296,22 @@ main {
     gap: 5px;
 }
 
-.rooms .room .info .include .incl img {
+.rooms .room .info .include .incl img,
+.holl .hotel-holl .info .include .incl img {
     width: 20px;
     height: 20px;
 }
 
-.rooms .room .info .include .incl p {
+.rooms .room .info .include .incl p,
+.holl .hotel-holl .info .include .incl p {
     font-size: 16px;
     font-family: 'Lora';
     color: #3F3E45;
 }
 
-.rooms .room .info .price {
+.rooms .room .info .price,
+.holl .hotel-holl .info .price,
+.holl .hotel-holl .info .book {
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
@@ -298,13 +320,25 @@ main {
     margin-top: 40px;
 }
 
-.rooms .room .info .price p {
+.holl .hotel-holl .info .price{
+    margin-top: 10px;
+}
+
+.rooms .room .info .price p,
+.holl .hotel-holl .info .price p,
+.holl .hotel-holl .info .book p {
     font-size: 24px;
     font-family: 'Montserrat';
     color: #3F3E45;
 }
 
-.rooms .room .info .price h2 {
+.holl .hotel-holl .info .book p{
+    font-size: 18px;
+}
+
+.rooms .room .info .price h2,
+.holl .hotel-holl .info .price h2,
+.holl .hotel-holl .info .book h2 {
     font-size: 46px;
     font-family: 'Gabriela';
     color: #15304D;
@@ -313,13 +347,29 @@ main {
     margin-left: 10px;
 }
 
-.rooms .room .info .price h2::after {
-    content: 'грн / ніч';
+.holl .hotel-holl .info .price h2{
+    font-size: 36px;
+}
+
+.holl .hotel-holl .info .book h2{
+    font-size: 24px;
+}
+
+.rooms .room .info .price h2::after,
+.holl .hotel-holl .info div::after {
     font-size: 24px;
     font-family: 'Montserrat';
     font-weight: 400;
     color: #3F3E45;
     margin-left: 10px;
+}
+
+.rooms .room .info .price h2::after{
+    content: 'грн / ніч';
+}
+
+.holl .hotel-holl .info .price::after{
+    content: 'грн';
 }
 
 
@@ -585,6 +635,7 @@ main {
 @media (max-width: 1200px) {
 
     .rooms,
+    .holl,
     .contacts,
     .about.us {
         padding-left: 40px;
@@ -606,7 +657,8 @@ main {
         align-items: center;
     }
 
-    .rooms .room {
+    .rooms .room,
+    .holl .hotel-holl {
         flex-direction: column;
         align-items: center;
     }
@@ -617,6 +669,7 @@ main {
 
     .about.us img,
     .rooms .room img,
+    .holl .hotel-holl img,
     .contacts iframe,
     .contacts>img {
         width: 100%;
@@ -778,28 +831,33 @@ main {
         padding: 10px 15зч;
     }
 
-    .rooms {
+    .rooms,
+    .holl {
         padding: 0 20px;
     }
 
-    .rooms .room .info h1 {
+    .rooms .room .info h1,
+    .holl .hotel-holl .info h1 {
         font-size: 26px;
     }
 
-    .rooms .room .info .include .incl p {
+    .rooms .room .info .include .incl p,
+    .holl .hotel-holl .info .include .incl p {
         font-size: 12px;
     }
 
-    .rooms .room .info .price p {
+    .rooms .room .info .price p,
+    .holl .hotel-holl .info .price p {
         font-size: 20px;
     }
 
-    .rooms .room .info .price h2 {
+    .rooms .room .info .price h2,
+    .holl .hotel-holl .info .price h2 {
         font-size: 36px;
     }
 
-    .rooms .room .info .price h2::after {
-        content: 'грн / ніч';
+    .rooms .room .info .price h2::after,
+    .holl .hotel-holl .info .price h2::after {
         font-size: 20px;
     }
 
