@@ -267,7 +267,7 @@ main {
     margin-bottom: 90px;
 }
 
-.holl .hotel-holl .info h1{
+.holl .hotel-holl .info h1 {
     margin-bottom: 35px;
 }
 
@@ -280,7 +280,7 @@ main {
     margin-top: -40px;
 }
 
-.holl .hotel-holl .info .include{
+.holl .hotel-holl .info .include {
     grid-template-columns: repeat(1, 1fr);
 
     margin-top: 0;
@@ -320,7 +320,7 @@ main {
     margin-top: 40px;
 }
 
-.holl .hotel-holl .info .price{
+.holl .hotel-holl .info .price {
     margin-top: 10px;
 }
 
@@ -332,7 +332,7 @@ main {
     color: #3F3E45;
 }
 
-.holl .hotel-holl .info .book p{
+.holl .hotel-holl .info .book p {
     font-size: 18px;
 }
 
@@ -347,11 +347,11 @@ main {
     margin-left: 10px;
 }
 
-.holl .hotel-holl .info .price h2{
+.holl .hotel-holl .info .price h2 {
     font-size: 36px;
 }
 
-.holl .hotel-holl .info .book h2{
+.holl .hotel-holl .info .book h2 {
     font-size: 24px;
 }
 
@@ -364,11 +364,11 @@ main {
     margin-left: 10px;
 }
 
-.rooms .room .info .price h2::after{
+.rooms .room .info .price h2::after {
     content: 'грн / ніч';
 }
 
-.holl .hotel-holl .info .price::after{
+.holl .hotel-holl .info .price::after {
     content: 'грн';
 }
 
@@ -651,6 +651,26 @@ main {
     }
 }
 
+@media (max-width: 1024px) {
+    .home .info h1 {
+        font-size: 60px;
+    }
+
+    .home .info h1::after {
+        margin: 40px auto 50px;
+    }
+
+    .home .info p {
+        font-size: 20px;
+    }
+
+    .home .info a {
+        font-size: 18px;
+
+        margin-top: 80px;
+    }
+}
+
 @media (max-width: 992px) {
     .about.us {
         flex-direction: column;
@@ -701,7 +721,7 @@ main {
     }
 
     .history .info h2 {
-        font-size:24px;
+        font-size: 24px;
     }
 
     .history-slider {
