@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+    <link rel="stylesheet" href="static/style/rooms_slideshow.css">
     <link rel="stylesheet" href="static/style/index.css">
     <link rel="stylesheet" href="static/style/base.css">
     <!-- <link rel="stylesheet" href="static/style/slider.css"> -->
@@ -94,7 +95,21 @@
             <h2>Номери</h2>
 
             <div class="room">
-                <img src="static/img/vodogray.png" alt="">
+                <section class="gallery">
+
+                    <div class="gallery-main">
+                        <img loading="lazy" class="main-slide active" src="static/img/vodogray.png" alt="">
+                        <img loading="lazy" class="main-slide" src="static/img/retro_bell.png" alt="">
+                        <img loading="lazy" class="main-slide" src="static/img/retro_coffe.png" alt="">
+                    </div>
+
+                    <div class="gallery-preview">
+                        <img class="preview active" src="static/img/vodogray.png">
+                        <img class="preview" src="static/img/retro_bell.png">
+                        <img class="preview" src="static/img/retro_coffe.png">
+                    </div>
+
+                </section>
 
                 <div class="info">
                     <h1>Стандартний номер</h1>
@@ -238,7 +253,21 @@
             <h2>Бенкетні зали</h2>
 
             <div class="hotel-holl">
-                <img src="static/img/vodogray.png" alt="">
+                <section class="gallery">
+
+                    <div class="gallery-main">
+                        <img loading="lazy" class="main-slide active" src="static/img/vodogray.png" alt="">
+                        <img loading="lazy" class="main-slide" src="static/img/retro_bell.png" alt="">
+                        <img loading="lazy" class="main-slide" src="static/img/retro_coffe.png" alt="">
+                    </div>
+
+                    <div class="gallery-preview">
+                        <img class="preview active" src="static/img/vodogray.png">
+                        <img class="preview" src="static/img/retro_bell.png">
+                        <img class="preview" src="static/img/retro_coffe.png">
+                    </div>
+
+                </section>
 
                 <div class="info">
                     <h1>Великий зал</h1>
@@ -262,7 +291,7 @@
                         <div class="incl">
                             <img src="static/img/checkbox.png" alt="">
                             <p>Спеціальні меню</p>
-                        </div>                        
+                        </div>
                     </div>
 
                     <div class="book">
@@ -320,6 +349,7 @@
         </section>
 
         <script src="static/js/slideshow.js"></script>
+        <script src="static/js/rooms_slideshow.js"></script>
 
     </main>
 

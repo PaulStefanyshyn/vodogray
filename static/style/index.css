@@ -241,13 +241,13 @@ main {
     gap: 50px;
 }
 
-.rooms .room img,
+/* .rooms .room img,
 .holl .hotel-holl img {
     width: 510px;
     height: 390px;
 
     border-radius: 20px;
-}
+} */
 
 .rooms .room .info,
 .holl .hotel-holl .info {
@@ -668,8 +668,8 @@ main {
     }
 
     .about.us img,
-    .rooms .room img,
-    .holl .hotel-holl img,
+    /* .rooms .room img,
+    .holl .hotel-holl img, */
     .contacts iframe,
     .contacts>img {
         width: 100%;
